@@ -5,7 +5,7 @@ FROM n8nio/n8n:latest
 USER root
 
 # 3. Install pnpm (required by many n8n community packages’ preinstall hooks)
-RUN npm install -g pnpm
+# RUN npm install -g pnpm
 
 # 4. Install all of your custom nodes in one step
 RUN pnpm install -g \
