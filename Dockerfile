@@ -4,8 +4,9 @@ FROM n8nio/n8n:latest
 # 2. Become root so we can install globally
 USER root
 
-# 3. Install pnpm (required by many n8n community packages’ preinstall hooks)
-# RUN npm install -g pnpm
+# 3) Enable Corepack and prepare pnpm (no EEXIST risk)
+RUN corepack enable \
+ && corepack prepare pnpm@latest --activate
 
 # 4. Install all of your custom nodes in one step
 RUN pnpm install -g \
