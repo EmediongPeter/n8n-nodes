@@ -8,6 +8,7 @@ USER root
 RUN corepack enable \
  && corepack prepare pnpm@latest --activate
 
+RUN pnpm setup
 # 4. Install all of your custom nodes in one step
 RUN pnpm install -g \
       n8n-nodes-firecrawl \
