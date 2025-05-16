@@ -15,4 +15,4 @@ USER node
 
 # 5) Expose the standard n8n port and default to running n8n
 EXPOSE 5678
-CMD ["n8n"]
+# CMD ["n8n"]
